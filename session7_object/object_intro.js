@@ -208,16 +208,16 @@ console.log('Thêm điện thoại');
 // //6.Tìm theo hãng
 
 // //7. Sắp xếp
-// for (let i = 0; i < listPhone.length; i++) { // Bước 1 2 3 ...
-//   for (let j = i + 1; j < listPhone.length - 1; j++) {
-//     // Ss vị trí x với các vị trí phía sau
-//     if (listPhone[i].name > listPhone[j].name) { // Tiêu chí sắp xếp và kiểu sắp xếp
-//       let temp = listPhone[i]; // đổi chỗ
-//       listPhone[i] = listPhone[j];
-//       listPhone[j] = temp;
-//     }
-//   }
-// }
+for (let i = 0; i < listPhone.length; i++) { // Bước 1 2 3 ...
+  for (let j = i + 1; j < listPhone.length; j++) {
+    // Ss vị trí x với các vị trí phía sau
+    if (listPhone[i].name > listPhone[j].name) { // Tiêu chí sắp xếp và kiểu sắp xếp
+      let temp = listPhone[i]; // đổi chỗ
+      listPhone[i] = listPhone[j];
+      listPhone[j] = temp;
+    }
+  }
+}
 
 let stop = true;
 while (stop) {
