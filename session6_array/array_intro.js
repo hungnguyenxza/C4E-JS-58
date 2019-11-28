@@ -101,29 +101,40 @@ for (let index = 0; index < names.length; index++) {
 //   console.log("Không tồn tại");
 // }
 
-// // 6. Hỏi 1 tên, tìm tất cả tên chứa từ này.
-// let name1 = prompt("Nhập tên");
-// let result = [];
-// for (let i = 0; i < names.length; i++) {
-//   const element = names[i];
-//   if (element.toLowerCase().includes(name1.toLowerCase())) {
-//     result.push(element);
-//   }
-// }
-// if (result.length === 0) {
-//   console.log("Không tìm thấy kết quả nào");
-// } else {
-//   console.log(`==== Kết quả tìm kiếm ${name1}:\nSTT: Tên`);
-//   for (let index = 0; index < result.length; index++) {
-//     console.log(`${index + 1} : ${result[index]}`);
-
-//   }
-// }
+// 6. Hỏi 1 tên, tìm tất cả tên chứa từ này.
+let name1 = prompt("Nhập tên");
+let result = [];
+for (let i = 0; i < names.length; i++) {
+  const element = names[i];
+  if (element.toLowerCase().includes(name1.toLowerCase())) {
+    result.push(element);
+  }
+}
+if (result.length === 0) {
+  console.log("Không tìm thấy kết quả nào");
+} else {
+  console.log(`==== Kết quả tìm kiếm ${name1}:\nSTT: Tên`);
+  for (let index = 0; index < result.length; index++) {
+    console.log(`${index + 1} : ${result[index]}`);
+  }
+}
 // 7. Sắp xếp tên.
-names.sort();
-names.reverse();
+// names.sort();
+// names.reverse();
+
+for (let i = 0; i < names.length; i++) { // Bước 1 2 3 ...
+  for (let j = i + 1; j < names.length - 1; j++) { 
+    // Ss vị trí x với các vị trí phía sau
+    if(names[i] > names[j]){
+      let temp = names[i];
+      names[i] = names[j];
+      names[j] = temp;
+    }
+  }
+}
+
 console.log(`===============\nSTT: Tên`);
 for (let index = 0; index < names.length; index++) {
   console.log(`${index + 1} : ${names[index]}`);
-
 }
+

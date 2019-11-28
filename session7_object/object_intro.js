@@ -87,6 +87,11 @@ Person.school = "DH HN";
 // Cửa hàng bán điện thoại
 
 //1. Tạo danh sách 3 điện thoại (tên, giá, nsx)
+let defaultPhone = {
+  name: '',
+  price: 0,
+  brand: '',
+};
 let listPhone = [
   {
     name: "iPhone X",
@@ -113,11 +118,138 @@ for (let i = 0; i < listPhone.length; i++) { // Duyệt từng điện thoại
   }
   console.log('---------------------');
 }
-let searchName = 'Note';
-console.log(`---------- Kết quả tìm kiếm "${searchName}":`);
-for (let i = 0; i < listPhone.length; i++) {
-  const phone = listPhone[i];
-  if (phone.name.toLowerCase().includes(searchName.toLowerCase())) {
-    console.log(phone);
+
+//1. Thêm
+console.log('Thêm điện thoại');
+// let addPhone = {};
+// for (const key in defaultPhone) {
+//     let newValue = prompt(` Nhập ${key} mới`);
+//     addPhone[key] = newValue;
+// }
+// listPhone.push(addPhone);
+//In
+// for (let i = 0; i < listPhone.length; i++) { // Duyệt từng điện thoại
+//   const phone = listPhone[i];
+//   console.log(`${i + 1}.`);
+//   for (const key in phone) { // Duyệt từng key trong điện thoại
+//     const value = phone[key];
+//     console.log(`${key}: ${value}`);
+//   }
+//   console.log('---------------------');
+// }
+
+//2. Sửa
+// console.log('Sửa điện thoại');
+// let stt = prompt("Nhập số thứ tự điện thoại muốn sửa:");
+// let name = prompt("Nhập tên mới:");
+// let price = prompt("Nhập giá mới:");
+// let brand = prompt("Nhập hãng mới:");
+
+// listPhone[stt - 1].name = name;
+// listPhone[stt - 1].price = price;
+// listPhone[stt - 1].brand = brand;
+//In
+// for (let i = 0; i < listPhone.length; i++) { // Duyệt từng điện thoại
+//   const phone = listPhone[i];
+//   console.log(`${i + 1}.`);
+//   for (const key in phone) { // Duyệt từng key trong điện thoại
+//     const value = phone[key];
+//     console.log(`${key}: ${value}`);
+//   }
+//   console.log('---------------------');
+// }
+// //3. Xóa
+// let stt1 = parseInt(prompt("Nhập số thứ tự điện thoại cần xóa"));
+// listPhone.splice(stt1 - 1, 1);
+// for (let i = 0; i < listPhone.length; i++) { // Duyệt từng điện thoại
+//   const phone = listPhone[i];
+//   console.log(`${i + 1}.`);
+//   for (const key in phone) { // Duyệt từng key trong điện thoại
+//     const value = phone[key];
+//     console.log(`${key}: ${value}`);
+//   }
+//   console.log('---------------------');
+// }
+
+// //4. Tìm theo thêm
+// // let searchName = 'Note';
+// // console.log(`---------- Kết quả tìm kiếm "${searchName}":`);
+// // for (let i = 0; i < listPhone.length; i++) {
+// //   const phone = listPhone[i];
+// //   if (phone.name.toLowerCase().includes(searchName.toLowerCase())) {
+// //     console.log(phone);
+// //   }
+// // }
+
+// //5. Tìm theo giá
+// console.log("-------- Tìm theo giá");
+// let pricePhone = parseInt(prompt("Nhap gia dt "));
+// console.log(`-------- ket qua gia dt "${pricePhone}"`);
+// let result = [];
+// for (let i = 0; i < listPhone.length; i++) {
+//   const phone = listPhone[i];
+//   if (phone.price === pricePhone) {
+//     result.push(phone);
+//   }
+// }
+// if (result.length === 0) {
+//   console.log(`Không có điện thoại nào giá ${pricePhone}`);
+// } else {
+//   for (let i = 0; i < result.length; i++) { // Duyệt từng điện thoại
+//     const phone = result[i];
+//     console.log(`${i + 1}.`);
+//     for (const key in phone) { // Duyệt từng key trong điện thoại
+//       const value = phone[key];
+//       console.log(`${key}: ${value}`);
+//     }
+//     console.log('---------------------');
+//   }
+// }
+// //6.Tìm theo hãng
+
+// //7. Sắp xếp
+// for (let i = 0; i < listPhone.length; i++) { // Bước 1 2 3 ...
+//   for (let j = i + 1; j < listPhone.length - 1; j++) {
+//     // Ss vị trí x với các vị trí phía sau
+//     if (listPhone[i].name > listPhone[j].name) { // Tiêu chí sắp xếp và kiểu sắp xếp
+//       let temp = listPhone[i]; // đổi chỗ
+//       listPhone[i] = listPhone[j];
+//       listPhone[j] = temp;
+//     }
+//   }
+// }
+
+let stop = true;
+while (stop) {
+  console.log("===MENU===");
+  console.log("1. Hien Thi");
+  console.log("2. Them");
+  console.log("3. Sua");
+  console.log("4. Xoa");
+  console.log("5. Thoat");
+  let input = prompt("Nhap lua chon");
+  switch (input) {
+    case "1":
+      console.log("Hien thi");
+      break;
+    case "2":
+      console.log("Them");
+      break;
+    case "3":
+      console.log("Sua");
+      break;
+    case "4":
+      console.log("Xoa");
+      break;
+    case "5":
+      console.log("Thoat");
+      stop = false;
+      break
   }
 }
+console.log("Hẹn gặp lại. Cảm ơn bạn");
+
+
+
+
+
