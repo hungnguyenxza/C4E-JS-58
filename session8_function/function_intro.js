@@ -13,7 +13,7 @@ let xinChao = function () {
 
 // xinChao();
 
-function tinhTong(a, b){
+function tinhTong(a, b) {
   print(a);
   print(b);
   print(`Tong 2 so la ${a + b}`);
@@ -22,30 +22,135 @@ function tinhTong(a, b){
 
 let soThuNhat = 10;
 let soThuHai = 20;
-tinhTong(soThuHai, soThuNhat);
-function tinhHieu(a, b, c){
+// tinhTong(soThuHai, soThuNhat);
+function tinhHieu(a, b, c) {
 
 }
-function tinhTich(a, b){
+function tinhTich(a, b) {
 
 }
-function tinhThuong(a, b){
+function tinhThuong(a, b) {
 
 }
 
-function print(message){
+function print(message) {
   // console.log(message);
   alert(message);
 }
 
-function tinhTong2(a, b){
+function tinhTong2(a, b) {
   return a + b;
 }
 
 let sum = tinhTong2(soThuNhat, soThuHai);
-print(sum);
+// print(sum);
 
 // chỉ số BMI, nhập vào chiều cao và cân nặng
 // in ra màn hình trạng thái của người dùng
 
+// 1. Đảo ngược chuỗi
+// Ví dụ: "Hello" => "olleH"
+function reverseString(string) {
+  // return string.split("").reverse().join(",");
+  let temp = ``;
+  for (let i = string.length - 1; i >= 0; i--) {
+    const element = string[i];
+    temp += element;
+  }
+  return temp;
+}
+// let nhapChuoi = prompt("Nhap chuoi");
+
+// print(reverseString(nhapChuoi));
+
+// 2. Đàn gà
+// a. 
+let chickenList = [
+  {
+    id: "ga01",
+    weight: 2
+  },
+  {
+    id: "ga02",
+    weight: 2.1
+  },
+  {
+    id: "ga03",
+    weight: 2.2
+  },
+  {
+    id: "ga04",
+    weight: 2.2
+  },
+  {
+    id: "ga05",
+    weight: 2.1
+  },
+]
+
+function changeWeightChickens(chickens, weightChange){
+  for (let i = 0; i < chickens.length; i++) {
+    const chicken = chickens[i];
+    chicken.weight = (chicken.weight * weightChange).toFixed(2);
+  }
+  return chickens;
+}
+
+function chickenWeightAfter2Weeks(chickens) {
+  return changeWeightChickens(chickens, 1.5);
+}
+console.table(chickenWeightAfter2Weeks(chickenList));
+// b.
+var max = chickenList[0].weight;
+function nangNhat(chickens) {
+  // for (let i = 0; i < chickens.length; i++) {
+  //   const chicken = chickens[i];
+  //   if (chicken.weight > max) {
+  //     max = chicken.weight;
+  //   }
+  // }
+  // for (let i = 0; i < chickens.length; i++) {
+  //   const chicken = chickens[i];
+  //   if(chicken.weight === max){
+  //     console.log(`${i+1}`);
+      
+  //   }
+  // }
+
+  let max = chickens[0];
+  let stt = 0;
+
+  for (let i = 1; i < chickens.length; i++) {
+    const chicken = chickens[i];
+    if(max.weight < chicken.weight){
+      max = chicken;
+      stt = i;
+    }
+  }
+  console.log(`Con gà lớn nhất có stt "${stt + 1}":`);
+  console.log(max);
+}
+nangNhat(chickenList);
+// c.
+function removeRandomChicken(chickens){
+  let random; // 0 <= random < chickens.length;
+  // 0 <= Math.random() < 1 // float
+  // 0 <= Math.random() * length < length; float
+  // Math.floor() làm tròn giảm, 5.7 => 5, 5.2 => 5
+  // Math.ceil() làm tròn tăng, 5.7 => 6, 5.2 => 6
+  // Math.round() làm tròn, 5.7 => 6, 5.3 => 5
+  random = Math.floor(Math.random() * chickens.length); 
+  let chickenH5N1 = chickens[random];
+  console.log('Con gà bị cúm H5N1 là: ');
+  console.log(chickenH5N1);
+  chickens.splice(random, 1);
+}
+
+removeRandomChicken(chickenList);
+removeRandomChicken(chickenList);
+removeRandomChicken(chickenList);
+console.table(chickenList);
+function downWeight(chickens){
+  return changeWeightChickens(chickens, 0.5);
+}
 
