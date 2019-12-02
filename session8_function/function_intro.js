@@ -91,7 +91,7 @@ let chickenList = [
 function changeWeightChickens(chickens, weightChange){
   for (let i = 0; i < chickens.length; i++) {
     const chicken = chickens[i];
-    chicken.weight = (chicken.weight * weightChange).toFixed(2);
+    chicken.weight = Number((chicken.weight * weightChange).toFixed(2));
   }
   return chickens;
 }
@@ -153,4 +153,13 @@ console.table(chickenList);
 function downWeight(chickens){
   return changeWeightChickens(chickens, 0.5);
 }
+function tinhTongTrongLuong(chickens) {
+  let sum = 0;
+  for (let i = 0; i < chickens.length; i++) {
+    const chicken = chickens[i];
+    sum += chicken.weight;
+  }
+  return sum;
+}
+console.log(tinhTongTrongLuong(chickenList))
 
