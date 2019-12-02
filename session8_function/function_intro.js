@@ -132,24 +132,24 @@ let chickenList = [
 // }
 // nangNhat(chickenList);
 // // c.
-// function removeRandomChicken(chickens){
-//   let random; // 0 <= random < chickens.length;
-//   // 0 <= Math.random() < 1 // float
-//   // 0 <= Math.random() * length < length; float
-//   // Math.floor() làm tròn giảm, 5.7 => 5, 5.2 => 5
-//   // Math.ceil() làm tròn tăng, 5.7 => 6, 5.2 => 6
-//   // Math.round() làm tròn, 5.7 => 6, 5.3 => 5
-//   random = Math.floor(Math.random() * chickens.length); 
-//   let chickenH5N1 = chickens[random];
-//   console.log('Con gà bị cúm H5N1 là: ');
-//   console.log(chickenH5N1);
-//   chickens.splice(random, 1);
-// }
+function removeRandomChicken(chickens){
+  let random; // 0 <= random < chickens.length;
+  // 0 <= Math.random() < 1 // float
+  // 0 <= Math.random() * length < length; float
+  // Math.floor() làm tròn giảm, 5.7 => 5, 5.2 => 5
+  // Math.ceil() làm tròn tăng, 5.7 => 6, 5.2 => 6
+  // Math.round() làm tròn, 5.7 => 6, 5.3 => 5
+  random = Math.floor(Math.random() * chickens.length); 
+  let chickenH5N1 = chickens[random];
+  console.log('Con gà bị cúm H5N1 là: ');
+  console.log(chickenH5N1);
+  chickens.splice(random, 1);
+}
 
-// removeRandomChicken(chickenList);
-// removeRandomChicken(chickenList);
-// removeRandomChicken(chickenList);
-// console.table(chickenList);
+removeRandomChicken(chickenList);
+removeRandomChicken(chickenList);
+removeRandomChicken(chickenList);
+console.table(chickenList);
 // function downWeight(chickens){
 //   return changeWeightChickens(chickens, 0.5);
 // }
