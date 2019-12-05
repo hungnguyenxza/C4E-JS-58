@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    *{
+      font-family: 'Courier New', Courier, monospace;
+    }
+    h1{
+      font-size: 50px;
+    }
+    #hello{
+      text-decoration: line-through;
+      text-transform: uppercase;
+      color: darkmagenta;
+    }
+    .xin-chao{
+      font-style: italic;
+      text-align: right;
+    }
+    selector1selector2{
+      /* áp dụng thẻ có đồng thời các selector */
+    }
+    selector1 selector2{
+      /* áp dụng cho selector2 là con của selector 1 */
+    }
+    selector1 > selector2{
+      /* áp dụng cho selector2 là con trực tiếp của selector1 */
+    }
+    selector1, selector2{
+      /* áp dụng đồng thời các selector */
+    }
+  </style>
 </head>
 <body>
   Xin chào các bạn
@@ -60,6 +90,19 @@
   </a>
 
   <a href="https://dantri.com.vn/">Click here</a>
+
+  <br/>
+
+  <center>
+    <a href="https://dantri.com.vn/" target="_blank">
+      <h1>
+        <i>
+          Click to continue
+        </i>
+      </h1>
+    </a>
+  </center>
+
 
 </body>
 </html>
