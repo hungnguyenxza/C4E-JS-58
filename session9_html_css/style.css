@@ -1,12 +1,12 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body{
   background-image: url('images/bg-pattern.jpg');
 }
-
 #container{
   width: 70%;
   margin: auto;
-
-  border: 1px solid black;
   height: 800px;
 }
 .logo-content img{
@@ -21,15 +21,15 @@ body{
   list-style-type: none;
   list-style: none;
   display: flex;
-  padding: 0;
+  padding: 2px;
   text-align: center;
+
 }
 .navbar ul li{
   flex: 1;
-  border: 1px solid black;
 }
 .navbar ul li.active{
-  background-color: red;
+  background-color: gray;
 }
 .navbar ul li:hover{
   background-color: gray;
@@ -43,4 +43,12 @@ body{
 }
 .navbar ul li a:hover{
   color: #000;
+}
+.banner img{
+  border-style: solid;
+  border-color: azure;
+  border-top-width: 5px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
 }
