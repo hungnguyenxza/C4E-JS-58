@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" onclick="countUserClick()">
+<html lang="en" <!--onclick="countUserClick()" -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,10 @@
 
 <body>
   <div class="container">
-    <h1 onclick="console.log('Clicked');" 
+    <!-- <h1 onclick="console.log('Clicked');" 
     >Click me</h1>
 
-    <h2 id="event-test">Click me on JS event</h2>
+    <h2 id="event-test" onclick="eventClick6(this, event);" class="" style="">Click me on JS event</h2>
 
     <h3 onclick="clickTest3();">Click me 3</h3>
 
@@ -23,6 +24,23 @@
     <h5 id="event-test5" onclick="getNow();">Get now</h5>
 
     <h1>Clicked: <span id="count-click">0</span></h1>
+
+    <button class="btn btn-primary" onclick="buttonClick(this, event)">Click me</button>
+    <button class="btn btn-primary" onclick="buttonClick(this)">Click me 1</button>
+    <button class="btn btn-primary" onclick="buttonClick(this)">Click me 2</button>
+    <button class="btn btn-primary" onclick="buttonClick(this)">Click me 3</button>
+    <button class="btn btn-primary" onclick="buttonClick(this)">Click me 4</button>
+    <button class="btn btn-primary" onclick="buttonClick(this)">Click me 5</button> -->
+
+
+    <ul id="food">
+
+    </ul>
+
+    <input type="text" id="input-text" />
+    <br />
+    <br />
+    <button class="btn btn-success" onclick="submit();">Ok</button>
 
   </div>
 

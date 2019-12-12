@@ -11,7 +11,7 @@ for (let i = 0; i < h3.length; i++) { //Duyệt dữ liệu
   h3[i].innerHTML = "Welcome C4E 60"; // Update data
 }
 
-let ul = document.getElementById("food");
+let ul = document.getElementById("food"); 
 // ul.innerHTML = "<li>Phở</li>" +
 //               "<li>Cơm</li>" + 
 //               "<li>Bún</li>";
