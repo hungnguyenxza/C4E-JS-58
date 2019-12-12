@@ -45,7 +45,6 @@ for (let i = 0; i < objects.length; i++) {
   document.getElementById("objects").innerHTML += html;
 }
 
-
 let persons = [
   {
     'name': "Hùng",
@@ -62,4 +61,16 @@ let persons = [
     'age': 25,
     'school': "ĐHCN",
   },
-]
+];
+
+for (let i = 0; i < persons.length; i++) {
+  const element = persons[i];
+  let html5 = `
+  <tr>
+  <td>${element.name}</td>
+  <td>${element.age}</td>
+  <td>${element.school}</td>
+</tr>
+  `
+  document.getElementById("tbody1").innerHTML+=html5;
+}
