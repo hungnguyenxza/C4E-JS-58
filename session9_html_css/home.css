@@ -6,3 +6,21 @@
   border-left-width: 2px;
   border-right-width: 2px;
 }
+.content{
+  display: flex;
+}
+.col-left{
+  flex: 2;
+}
+.col-right{
+  flex: 1;
+}
+.col-left, .col-right{
+  padding: 15px;
+}
+.col-left-content{
+  background-color: #fff;
+}
+.col-right-content{
+  background-color: aquamarine;
+}
