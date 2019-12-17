@@ -71,11 +71,21 @@ function submit() {
   foods.push(inputText);
   display();
 }
+
+
+
 // BTVN: Làm tương tự với dl dt dd về danh sách định nghĩa Javascript, html,...
 //(gợi ý: làm 2 ô input để nhập)
 
 
 // Làm tương tự với phần Persons
 // (gợi ý: làm 3 ô input để nhập)
+
+function submitByEnter(e){
+  if(e.keyCode === 13){
+    submit();
+  }
+}
+
 
 
