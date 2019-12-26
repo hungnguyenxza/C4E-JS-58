@@ -41,6 +41,14 @@ clother3.color = "Blue";
 clother3.description = "Quần âu nam size L, màu xanh";
 clothers.push(clother3);
 
+let checkExist = localStorage.getItem("AllClothers");
+if (checkExist === null) {
+  localStorage.setItem('AllClothers', JSON.stringify(clothers));
+} else {
+  clothers = JSON.parse(checkExist);
+}
+
+
 function displayListClothers(listClothers) {
   let body = document.getElementById('list-clothers');
   let s = '';
@@ -66,7 +74,7 @@ function displayListClothers(listClothers) {
 }
 displayListClothers(clothers);//
 
-function editClother(code){
+function editClother(code) {
   let currentClother;
   for (let i = 0; i < clothers.length; i++) {
     const clother = clothers[i];
@@ -94,10 +102,9 @@ function deleteClother(code) {
       }
     }
     displayListClothers(clothers);
+    localStorage.setItem('AllClothers', JSON.stringify(clothers));
   }
 }
-
-
 
 function addClother(e) {
   e.preventDefault();
@@ -115,15 +122,16 @@ function addClother(e) {
 
   document.getElementById('frmNewClother').reset();
   $('#addClother').modal('hide');
+  localStorage.setItem('AllClothers', JSON.stringify(clothers));
 }
 
-function saveClother(e){
+function saveClother(e) {
   e.preventDefault();
 
   let code = document.getElementById('txtEditCode').value;
   let name = document.getElementById('txtEditName').value;
   let price = document.getElementById('txtEditPrice').value;
-  
+
   for (let i = 0; i < clothers.length; i++) {
     const clother = clothers[i];
     if (clother.code === code) {
@@ -137,4 +145,5 @@ function saveClother(e){
 
   document.getElementById('frmEditClother').reset();
   $('#editClother').modal('hide');
+  localStorage.setItem('AllClothers', JSON.stringify(clothers));
 }
